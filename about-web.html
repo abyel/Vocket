@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tentang - Vocket Store</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+</head>
+
+<body>
+<div class="header">
+        <div class="header-top">
+            <div class="logo-container">
+                <img src="assets/image/logo/logo.jpg" alt="Vall Store Logo" class="logo">
+                <span class="store-name">ocket</span>
+            </div>
+        </div>
+    </div>
+  <!-- Main illustration after first header -->
+  <div class="illustration-container-decorative">
+    <img src="assets/image/illustrations/line-decorative.png" alt="Web App Development Illustration" class="illustration-placeholder">
+  </div>
+
+ 
+  
+
+  <div class="slide-up">
+    <p class="about-container">
+     Halo! Saya Aby, seorang developer magang yang sedang mengembangkan Vocket, sebuah aplikasi web yang dirancang untuk memudahkan pelanggan dalam mencari dan membeli aplikasi premium dengan cepat dan nyaman.
+    </p>
+
+    <div class="contact-support">
+      
+      
+  
+      <!-- Tambahan Sosial Media -->
+      <div class="social-media">
+    
+          <a href="https://wa.me/+6289519301487" class="social-button wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+          <a href="https://www.instagram.com/valltierstore/profilecard/?igsh=MTlmOWZ6NGl0OTg4aQ==" class="social-button ig"><i class="fab fa-instagram"></i> Instagram</a>
+          <a href="https://www.tiktok.com/@vall.code?_t=ZS-8uxG3fzoHvZ&_r=1" class="social-button tt"><i class="fab fa-tiktok"></i> TikTok</a>
+      </div>
+  </div>
+  
+  <!-- CSS dengan Animasi Hover -->
+  <style>
+      .social-media {
+          margin-top: -50px;
+          text-align: center;
+          margin-bottom: -30px;
+      }
+      .social-button {
+          display: inline-block;
+          margin: 5px;
+          padding: 10px 15px;
+          text-decoration: none;
+          color: white;
+          border-radius: 5px;
+          font-size: 14px;
+          transition: all 0.3s ease-in-out;
+          position: relative;
+          overflow: hidden;
+      }
+      
+      /* Warna Default */
+      .wa { background-color: #25d366; } /* Warna khas WhatsApp */
+      .ig { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); } /* Gradasi khas Instagram */
+      .tt { background-color: #000; } /* Warna khas TikTok */
+  
+      /* Hover Effect */
+      .social-button::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 300%;
+          height: 300%;
+          background: rgba(255, 255, 255, 0.2);
+          transition: all 0.4s ease-in-out;
+          border-radius: 50%;
+          transform: translate(-50%, -50%) scale(0);
+      }
+  
+      .social-button:hover::before {
+          transform: translate(-50%, -50%) scale(1);
+      }
+  
+      .social-button:hover {
+          transform: translateY(-3px) scale(1.05);
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+  </style>
+  
+    <!-- Decorative element at the bottom -->
+    <div class="illustration-container-decorative">
+      <img src="assets/image/illustrations/line-decorative.png" alt="Decorative Element" class="illustration-placeholder">
+    </div>
+  </div>
+
+  <nav class="navigation">
+    <a href="about-web.html" class="nav-item active" data-nav="notifications">
+      <i class="fas fa-bell nav-icon"></i>
+      <span>Tentang</span>
+    </a>
+    <a href="index.html" class="nav-item " data-nav="home">
+      <i class="fas fa-home nav-icon"></i>
+      <span>Beranda</span>
+    </a>
+    <a href="question.html" class="nav-item" data-nav="notifications">
+      <i class="fas fa-question-circle nav-icon"></i>
+      <span>FAQ</span>
+    </a>
+  </nav>
+  <script src="assets/js/scripts.js"></script>
+
+</body>
+
+</html>

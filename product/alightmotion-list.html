@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Produk - Vocket Store</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+     <div class="header">
+        <div class="header-top">
+            <div class="logo-container">
+                <img src="../assets/image/logo/logo.jpg" alt="Vall Store Logo" class="logo">
+                <span class="store-name">ocket</span>
+            </div>
+        </div>
+    </div>
+    <div class="back-button">
+        <a href="javascript:history.back()">
+            <i class="fas fa-arrow-left"></i>
+        </a>
+    </div>
+    <div class="product-header fade-in">
+        <div class="product-logo">
+            <img src="../assets/image/logo/apk/alightmotion.jpg"
+                alt="Alight Motion Logo">
+        </div>
+        <div class="product-header-info">
+            <h1>Alight Motion Premium</h1>
+        </div>
+    </div>
+
+    <div class="section-header">
+        <h2>ALIGHT MOTION LIST</h2>
+    </div>
+    <div class="product-list">
+        <div class="product-item slide-up" data-product-name="Alight Motion ANDROID 1 Tahun" data-product-price="Rp.15.000"
+            data-product-type="Alight Motion">
+            <div class="product-item-left">
+                <div class="item-info">
+                    <h3>1 Tahun</h3>
+                    <p>Alight Motion ANDROID</p>
+                </div>
+            </div>
+            <div class="original-price">Rp 25.000</div>
+            <div class="product-item-price">Rp.15.000</div>
+        </div>
+    </div>
+
+   
+    <div class="product-list">
+        <div class="product-item slide-up" data-product-name="Alight Motion IOS/APPLE 1 Tahun" data-product-price="Rp.20.000"
+            data-product-type="Alight Motion">
+            <div class="product-item-left">
+                <div class="item-info">
+                    <h3>1 Tahun</h3>
+                    <p>Alight Motion IOS/APPLE</p>
+                </div>
+            </div>
+            <div class="original-price">Rp 30.000</div>
+            <div class="product-item-price">Rp.20.000</div>
+        </div>
+    </div>
+
+    <!-- Product Order Modal -->
+    <div class="modal-overlay" id="orderModal">
+        <div class="modal-container">
+            <div class="drag-indicator"></div>
+
+            <div class="modal-header">
+                <h2>Form Pemesanan</h2>
+                <button class="close-modal" id="closeModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div class="product-details">
+                <div class="product-logo">
+                    <img src="../assets/image/logo/apk/alightmotion.jpg"
+                        alt="Alight Motion Logo" id="modalProductLogo">
+                </div>
+                <div class="product-info">
+                    <div class="product-name" id="modalProductName">Alight Motion Premium 1 Tahun</div>
+                    <div class="product-type" id="modalProductType">Alight Motion</div>
+                </div>
+                <div class="product-price" id="modalProductPrice">Rp.15.000</div>
+            </div>
+
+            <form id="orderForm">
+                <div class="form-group">
+                    <label for="customerName">Nama Lengkap</label>
+                    <input type="text" id="customerName" placeholder="Masukkan nama lengkap Anda" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="orderDate">Tanggal Pemesanan</label>
+                    <input type="text" id="orderDate" readonly>
+                </div>
+
+                <div class="acceptance-container">
+                    <label class="custom-checkbox">
+                        <input type="checkbox" id="acceptRisks" required>
+                        <span class="checkmark"></span>
+                    </label>
+                    <div class="acceptance-text">
+                        Saya menyetujui <span class="acceptance-link" id="showRisks">syarat dan ketentuan</span> yang
+                        berlaku dan memahami semua risiko yang mungkin terjadi.
+                    </div>
+                </div>
+
+                <button type="button" id="qrisPaymentBtn" class="submit-btn">
+                    <i class="fas fa-qrcode"></i> Lanjutkan
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- QRIS Payment Modal -->
+    <div class="modal-overlay" id="qrisModal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2>Pembayaran QRIS</h2>
+                <button class="close-modal" id="closeQrisModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div class="qris-container">
+                <div class="product-summary">
+                    <p><strong>Produk:</strong> <span id="qrisProductName">Alight Motion Premium 1 Tahun</span></p>
+                    <p><strong>Harga:</strong> <span id="qrisProductPrice">Rp.15.000</span></p>
+                </div>
+                <div class="qr-image">
+                    <img src="../assets/image/qris.jpg" alt="QRIS Payment Code" id="qrisImage">
+                </div>
+
+                <div class="qris-note">
+                    <p>Setelah melakukan pembayaran kamu wajib mengirimkan bukti pembayaran kepada admin</p>
+                </div>
+
+                <button id="confirmPaymentBtn" class="submit-btn">
+                    <i class="fas fa-check-circle"></i> Konfirmasi Pesanan
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Risk Acceptance Modal -->
+    <div class="risk-modal" id="riskModal">
+        <div class="risk-header">
+            <h3>Syarat dan Ketentuan</h3>
+            <button class="close-modal" id="closeRiskModal">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <div class="risk-content">
+            <h4>Risiko yang Perlu Diketahui:</h4>
+            <ul>
+                <li>Akun yang dibeli adalah akun private yang hanya digunakan oleh pembeli.</li>
+                <li>Garansi 6 bulan berlaku untuk semua paket, atau selama method masih ada.</li>
+                <li>Tidak diperkenankan mengubah profil, email, dan password akun.</li>
+                <li>Pembayaran yang sudah dilakukan tidak dapat dikembalikan (non-refundable).</li>
+                <li>Dengan menyetujui ketentuan ini, pembeli memahami dan menerima semua risiko yang telah disebutkan.</li>
+            </ul>
+        </div>
+
+        <div class="risk-actions">
+            <button class="accept-risks" id="acceptRisksBtn">
+                <i class="fas fa-check-circle"></i> Saya Mengerti & Setuju
+            </button>
+        </div>
+    </div>
+
+    <!-- Success Notification -->
+    <div class="success-notification" id="successNotification">
+        <i class="fas fa-check-circle"></i> Pesanan anda akan di tanggapi admin, harap menunggu
+    </div>
+
+    <nav class="navigation">
+        <a href="../about-web.html" class="nav-item" data-nav="notifications">
+            <i class="fas fa-bell nav-icon"></i>
+            <span>Tentang</span>
+        </a>
+        <a href="../index.html" class="nav-item" data-nav="home">
+            <i class="fas fa-home nav-icon"></i>
+            <span>Beranda</span>
+        </a>
+        <a href="../question.html" class="nav-item " data-nav="notifications">
+            <i class="fas fa-question-circle nav-icon"></i>
+            <span>FAQ</span>
+        </a>
+    </nav>
+
+    <script src="../assets/js/alightmotion.js   "></script>
+    <script src="../assets/js/scripts.js"></script>
+</body>
+
+</html>

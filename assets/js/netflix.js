@@ -205,25 +205,13 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('DOMContentLoaded', function () {
     // Package types and their explanations
     const packageInfo = {
-        "NETFLIX LIST": {
-            "title": "Penjelasan 1P1U",
-             description: "I 1P1U adalah singkatan dari 1 Profile 1 User<br>I 1P1U hanya digunakan oleh 1 orang & 1 perangkat<br>I Sangat aman & tidak berbagi dengan user lain<br>I Nyaman untuk pemakaian pribadi<br>I Sangat jarang terkena limit"
-        },
-        "NON PRIVATE": {
-    "title": "Penjelasan 1P2U",
-    "description": "I 1P2U adalah singkatan dari 1 Profile 2 User<br>I Digunakan oleh 2 orang dalam 1 profile<br>I Dalam satu akun terdapat 5 profile, total bisa untuk 10 user<br>I Umumnya digunakan di 10 device<br>I Sering terkena limit screen karena terlalu banyak pengguna"
-},
-
-"SEMI PRIVATE": {
-    "title": "Penjelasan Semi Private",
-    "description": "I Akun digunakan oleh 2 orang, masing-masing dapat login di 1 device<br>I Total hanya 2 device aktif<br>I Tidak berbagi profil dengan pengguna lain<br>I Jarang terkena limit screen<br>I Cocok untuk pengguna pribadi dengan harga lebih terjangkau"
-},
-
-"PRIVATE ACCOUNT": {
-    "title": "Penjelasan Private Account",
-    "description": "I Mendapat akses penuh ke akun pribadi<br>I Terdapat 5 profil dan bisa login hingga 5–10 device<br>I Bebas edit nama profil, pin, dan password<br>I Tidak berbagi dengan siapa pun<br>I Cocok untuk keluarga atau dijual kembali"
+      "NETFLIX LIST": {
+  title: "PERHATIAN:",
+  description: `Netflix adalah akun sharing dengan durasi aktif 25–30 hari dan garansi penuh selama masa aktif. Proses aktivasi memerlukan waktu 0–3 hari tergantung antrian dan slot yang tersedia. Karena akun dibagikan, ada risiko limit yang mungkin terjadi. Nomor kosong atau GTC tidak bisa melakukan pemesanan dan pelanggan wajib mengisi form dari admin sebelum melanjutkan. Pemesanan dapat dibatalkan tanpa refund jika pelanggan melanggar syarat dan ketentuan yang berlaku di Vocket Store.`
 }
 
+
+ 
     };
 
     // Add info icons to each section header

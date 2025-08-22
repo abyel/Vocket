@@ -50,9 +50,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 modalProductType.textContent = currentProduct.type;
 
                 // Set logo based on product type
-                if (currentProduct.type === 'YouTube Premium') {
+                if (currentProduct.type === 'CapCut') {
                     modalProductLogo.src =
-                        "../assets/image/logo/apk/youtube.png";
+                        "../assets/image/logo/apk/ChatGPT.jpg";
                 }
 
                 // Show the modal with animation
@@ -104,14 +104,14 @@ document.addEventListener('DOMContentLoaded', function () {
         qrisModal.classList.add('active');
     });
 
-    // Confirm payment button handler
+    // Replace your current confirmPaymentBtn event listener with this:
     confirmPaymentBtn.addEventListener('click', function () {
         const customerName = document.getElementById('customerName').value;
 
         // Prepare WhatsApp message
         const whatsappNumber = '6289519301487';
         const message = encodeURIComponent(
-            `*TOPUP YOUTUBE PREMIUM*\n\n` +
+            `*TOPUP CAPCUT PREMIUM*\n\n` +
             `*Produk:* ${currentProduct.name}\n` +
             `*Harga:* ${currentProduct.price}\n\n` +
             `*Data Pembeli:*\n` +
@@ -124,13 +124,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Try to use the device-specific direct method first
         const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-        
+
         if (isMobile) {
             // Direct to WhatsApp app on mobile
             window.location.href = `whatsapp://send?phone=${whatsappNumber}&text=${message}`;
         } else {
             // For desktop, use the web version
-            window.open(`https://api.whatsapp.com/send/?phone=${whatsappNumber}&text=${message}`, '_self');
+            window.open(
+                `https://api.whatsapp.com/send/?phone=${whatsappNumber}&text=${message}`,
+                '_self');
         }
 
         // Show success notification immediately
@@ -203,18 +205,11 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('DOMContentLoaded', function () {
     // Package types and their explanations
     const packageInfo = {
-        "YOUTUBE LIST": {
-            "title": "FAMILY HEAD",
-            "description": "I Private<br>I No Garansi<br>I Tidak bisa ganti email dan password"
+        "CAPCUT SHARING": {
+            "title": "CAPCUT SHARING",
+            "description": "CapCut Premium adalah akun sharing untuk maksimal 5 pengguna dengan garansi sesuai paket pembelian. Tidak bisa ganti email dan password, namun bisa langganan ulang setelah masa aktif habis. Jika ada kendala, hubungi admin via sosial media atau cek bagian FAQ. Langganan dapat dibatalkan tanpa refund jika pelanggan melanggar syarat dan ketentuan pembelian di Vocket Store."
         },
-        "PAKET FAMILY": {
-            "title": "FAMILY PLAN",
-            "description": "I Acc cust only, acc store +2k<br>I Udah join famp 2x = harus pake akun/gmail fresh<br>I Tidak bisa ganti email dan password"
-        },
-        "PAKET HEMAT 3 BULAN": {
-            "title": "INDIVIDU PLAN",
-            "description": "I Private<br>I Garansi sesuai paket yang dipilih<br>I Full durasi sesuai paket<br>I Tidak bisa ganti email dan password"
-        }
+      
     };
 
     // Add info icons to each section header
@@ -229,23 +224,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Create the info modal HTML
     const infoModalHTML = `
-    <div class="modal-overlay" id="infoModal">
-        <div class="modal-container">
-            <div class="drag-indicator"></div>
+<div class="modal-overlay" id="infoModal">
+<div class="modal-container">
+    <div class="drag-indicator"></div>
 
-            <div class="modal-header">
-                <h2 id="infoModalTitle">Informasi Paket</h2>
-                <button class="close-modal" id="closeInfoModal">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-
-            <div class="info-content" id="infoModalContent">
-                <!-- Content will be inserted here -->
-            </div>
-        </div>
+    <div class="modal-header">
+        <h2 id="infoModalTitle">Informasi Paket</h2>
+        <button class="close-modal" id="closeInfoModal">
+            <i class="fas fa-times"></i>
+        </button>
     </div>
-    `;
+
+    <div class="info-content" id="infoModalContent">
+        <!-- Content will be inserted here -->
+    </div>
+</div>
+</div>
+`;
 
     // Add the modal to the body
     document.body.insertAdjacentHTML('beforeend', infoModalHTML);

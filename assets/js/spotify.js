@@ -204,8 +204,8 @@ document.addEventListener('DOMContentLoaded', function () {
     // Package types and their explanations
     const packageInfo = {
         "SPOTIFY LIST": {
-            "title": "SPOTIFY INDPLAN NOGAR",
-            "description": "I Akun Spotify Premium Indo dengan harga termurah<br>I Tanpa garansi (NOGAR)<br>I Tidak bisa ganti email dan password<br>I Bisa langganan ulang jika masa aktif habis"
+            "title": "SPOTIFY",
+            "description": "Spotify Premium Indonesia dengan harga terjangkau, menggunakan sistem akun sharing tanpa akses untuk mengganti email atau password. Garansi berlaku selama 1x24 jam setelah aktivasi. Setelah masa aktif habis, kamu bisa melakukan langganan ulang dengan akun yang sama.Pemesanan dapat dibatalkan tanpa refund jika pelanggan melanggar syarat dan ketentuan yang berlaku di Vocket Store."
         }
     };
 

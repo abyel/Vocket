@@ -206,13 +206,10 @@ document.addEventListener('DOMContentLoaded', function () {
     // Package types and their explanations
     const packageInfo = {
         "CAPCUT SHARING": {
-            "title": "CAPCUT SHARING 5U",
-            "description": "I Akun CapCut Premium berbagi dengan 5 user<br>I Garansi 7 hari<br>I Tidak bisa ganti email dan password<br>I Bisa langganan ulang jika masa aktif habis"
+            "title": "CAPCUT SHARING",
+            "description": "CapCut Premium adalah akun sharing untuk maksimal 5 pengguna dengan garansi sesuai paket pembelian. Tidak bisa ganti email dan password, namun bisa langganan ulang setelah masa aktif habis. Jika ada kendala, hubungi admin via sosial media atau cek bagian FAQ. Langganan dapat dibatalkan tanpa refund jika pelanggan melanggar syarat dan ketentuan pembelian di Vocket Store."
         },
-        "CAPCUT PRIVATE": {
-            "title": "CAPCUT PRIVATE",
-            "description": "I Akun CapCut Premium yang digunakan sendiri (private)<br>I Garansi 7 hari<br>I Tidak bisa ganti email dan password<br>I Bisa langganan ulang jika masa aktif habis"
-        }
+      
     };
 
     // Add info icons to each section header

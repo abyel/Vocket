@@ -80,11 +80,11 @@ body {
 
 .header-top {
     display: flex;
-    justify-content: center; /* Tengahkan semua elemen */
-    align-items: center; /* Tengahkan secara vertikal */
-    height: 90px;
+    justify-content: flex-end; /* Biar semua isi ke kiri */
+    align-items: center;
+    height: 80px;
     background-color: #ffffff;
-    padding: 10px;
+    padding: 10px 16px; /* Tambahin padding kanan-kiri */
 }
 
 
@@ -229,12 +229,12 @@ body {
 
 .btn {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 5px 10px;
     background: white;
     color: var(--primary-color);
-    border-radius: 24px;
+    border-radius: 7px;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 9px;
     text-decoration: none;
     box-shadow: var(--shadow);
     border: none;
@@ -275,10 +275,10 @@ body {
 
 .banner-img {
     position: absolute;
-    right: -20px;
+    right: -5px;
     bottom: -15px;
-    width: 150px;
-    height: 150px;
+    width: 170px;
+    height: 170px;
     transition: var(--transition);
     opacity: 0.25;
     animation: float 3s ease-in-out infinite;
@@ -382,7 +382,7 @@ body {
 
 .products-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 16px;
     padding: 16px;
 }
@@ -471,13 +471,17 @@ body {
 }
 
 .product-info {
-    padding: 16px;
+    padding: 20px;
+    position: relative; /* atau absolute/fixed tergantung layout */
+    z-index: 9999; /* angka besar biar selalu di atas */
 }
 
+
 .product-name {
-    font-size: 15px;
+    font-size: 12px;
     font-weight: 600;
-    margin-bottom: 6px;
+    margin-bottom: 2px;
+    margin-top: -29px ;
     transition: var(--transition);
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -490,7 +494,7 @@ body {
 }
 
 .product-desc {
-    font-size: 12px;
+    font-size: 10px;
     color: #777;
     margin-bottom: 10px;
     display: -webkit-box;
@@ -514,7 +518,7 @@ body {
 .original-price {
     font-size: 12px;
     color: #999;
-    text-decoration: line-through;
+
     margin-left: 90px;
 }
 
@@ -1524,7 +1528,7 @@ input[type="tel"]:focus {
 
 .back-button {
     position: fixed;
-    top: 30px;
+    top: 19px;
     left: 15px;
     z-index: 1000;
 }
@@ -1581,5 +1585,32 @@ input[type="tel"]:focus {
     border-radius: 12px;
    
   }
-  
- 
+  .paragraf {
+  text-indent: 2em; /* memberi jarak masuk di awal paragraf */
+  margin-bottom: 10px; /* biar ada jarak antar paragraf */
+  text-align: justify; /* opsional, biar rapi rata kiri-kanan */
+}
+
+ .highlight {
+  background: linear-gradient(90deg, #3e3e3e, #ff1c02);
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+.faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.faq-tag {
+  background-color: #ff4d4d;
+  color: #fff;
+  font-size: 0.7rem;
+  padding: 2px 6px;
+  border-radius: 6px;
+  margin-left: 10px;
+}
+

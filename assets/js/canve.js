@@ -205,16 +205,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const packageInfo = {
         "CANVA LIST": {
             "title": "CANVA PRO MEMBER",
-            "description": "<b>NOTE :</b><br>I Full garansi harian dan bulanan<br>I Need alamat gmail<br>I Akun gmail seller +2K<br>I 1 Tahun Garansi 6 bulan<br>I Lifetime edu garansi 1 tahun"
+            "description": "Terdapat dua jenis akses pada Canva Pro, yaitu Member dan Designer. Member hanya dapat menikmati fitur-fitur yang tersedia tanpa bisa menambahkan elemen sendiri, sedangkan Designer memiliki akses penuh untuk mengunggah font dan mengelola brandkit melalui fitur Paket 1 tahun dilengkapi garansi selama 6 bulan, sedangkan paket lifetime mendapat garansi hingga 8 bulan dan tidak akan mengalami pergantian tim selama masa garansi. Semua akun dapat digunakan di berbagai perangkat (all device) tanpa batasan"
         },
-        "CANVA PRO HEAD OWNER": {
-            "title": "CANVA PRO HEAD OWNER (1 BULAN)",
-            "description": "<b>NOTE :</b><br>I Bisa invite 100 member<br>I Full garansi<br>I Akun seller"
-        },
-        "CANVA PRO LIFETIME EDU": {
-            "title": "CANVA PRO LIFETIME EDU",
-            "description": "<b>NOTE :</b><br>I Bisa invite 500 member<br>I Garansi 3 bulan<br>I Bisa pake gmail cust / seller"
-        }
+      
     };
 
     // Add info icons to each section header

@@ -74,35 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const promoButton = document.getElementById('promoButton');
     const dots = document.querySelectorAll('.dot');
 
-    const bannerContent = [{
-            title: 'Penawaran Eksklusif!',
-            description: 'Dapatkan akses premium dengan harga spesial terbaik',
-        
-            image: 'assets/image/icon/banner/netflix.png',
-            link: 'product/netflix-list.html'
-        },
-        {
-            title: 'Spotify Premium',
-            description: 'Nikmati musik tanpa batas dan tanpa iklan',
-           
-            image: 'assets/image/logo/apk/spotify.jpg',
-            link: 'product/spotify-list.html'
-        },
-        {
-            title: 'YouTube Premium',
-            description: 'Tonton video tanpa gangguan iklan',
-      
-            image: 'assets/image/logo/apk/youtube.png',
-            link: 'product/youtube-list.html'
-        },
-        {
-            title: 'Mobile Legends',
-            description: 'Top up diamond dengan harga termurah',
-          
-            image: 'assets/image/icon/banner/mlbb.png',
-            link: 'product/mlbb-list.html'
-        }
-    ];
+  
 
     let currentBannerIndex = 0;
     let bannerInterval;
